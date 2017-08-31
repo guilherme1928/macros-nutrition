@@ -1,0 +1,27 @@
+.svg-check {
+	background: url("svg/sprite.css-e71dc480.svg") 0 0 no-repeat;
+}
+
+.svg-check-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-connect {
+	background: url("svg/sprite.css-e71dc480.svg") 100% 0 no-repeat;
+}
+
+.svg-connect-dims {
+	width: 24px;
+	height: 24px;
+}
+
+.svg-dashboard {
+	background: url("svg/sprite.css-e71dc480.svg") 0 100% no-repeat;
+}
+
+.svg-dashboard-dims {
+	width: 24px;
+	height: 24px;
+}
+

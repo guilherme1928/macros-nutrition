@@ -1,0 +1,44 @@
+.result-item
+	// layout
+	display: flex
+	flex-flow: column wrap
+	justify-content: center
+	align: 
+		items: center
+		content: center
+
+	padding:
+		left: 0
+		right: 0
+	border:
+		left: 1px solid $color-border-gray-light
+		right: 1px solid $color-border-gray-light
+
+	&:first-child
+		border-left: none
+	&:last-child
+		border-right: none
+
+	&.col-xs-6
+		&:nth-child(2)
+			border-left: none
+	> h2, 
+	> div
+		width: 100%
+		text-align: center
+	h2
+		margin: 0
+		text-transform: uppercase
+		border-bottom: 1px solid $color-border-gray-light
+		@include max690
+			padding: 7px 0
+			font-size: 13px
+
+	> div
+		min-height: 100px
+		display: flex
+		flex-flow: column wrap
+		justify-content: center
+		align: 
+			items: center
+			content: center

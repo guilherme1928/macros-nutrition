@@ -1,0 +1,113 @@
+@import 'shared-mixin'
+
+$font-heading: "Open Sans", sans-serif
+$font-body: "Open Sans", sans-serif
+
+/* variables
+/* --------------------------------------------------- */
+$color-bg-gray: #a2a2a2
+$color-bg-black: #545353
+
+$color-text-gray: #918f8f
+
+
+$color-border-gray: #a2a2a2
+$color-border-gray-light: lighten($color-border-gray, 20%)
+$color-border-gray-dark: #8d8d8d
+$color-border-black: #4a4a4a
+
+/* settings-default
+/* --------------------------------------------------- */
+%default-transition
+	transition: 250ms ease
+%default-list
+	list-style: none outside none
+	margin: 0
+	padding: 0
+
+%default-space-layout-hor
+	padding:
+		top: 75px
+		bottom: 45px
+
+%default-space-layout-vert
+	padding:
+		left: 30px
+		right: 30px
+
+%hypenate
+	overflow-wrap: break-word
+	word-wrap: break-word
+	-webkit-hyphens: auto
+	-ms-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+
+%maskbg
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+%sectionbg
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+
+%sectionbgpara
+	.parabg
+		position: fixed
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+
+%owlcarouselfix
+	.owl-wrapper,
+	.owl-item
+		-webkit-backface-visibility: hidden
+		-moz-backface-visibility: hidden
+		-ms-backface-visibility: hidden
+		-webkit-transform: translate3d(0, 0, 0)
+		-moz-transform: translate3d(0, 0, 0)
+		-ms-transform: translate3d(0, 0, 0)
+		z-index: 999
+    backface-visibility: hidden
+	.owl-dots
+		display: none !important
+		position: absolute
+		bottom: 20px
+		width: 100%
+		left: 0
+		text-align: center
+		.owl-dot
+			display: inline-block
+			&.active,
+			&:hover,
+			&:focus
+				span
+			span
+				border-radius: 50%
+				height: 15px
+				width: 15px
+				background: white
+				transition: all 250ms ease
+				display: block
+				margin: 0 5px
+				position: relative
+				&:before
+					content: ""
+					position: absolute
+					width: 5px
+					height: 5px
+					border-radius: 50%
+					left: 0
+					bottom: 0
+					right: 0
+					top: 0
+					margin: auto
+					background: black

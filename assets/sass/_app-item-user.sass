@@ -1,0 +1,29 @@
+.app-item-user
+	// layout
+	display: flex
+	flex-flow: column wrap
+	justify-content: center
+	align:
+		items: center
+		content: center
+
+	img
+		border-radius: 50%
+		border: 10px solid $color-border-gray
+		@include max690
+			border-width: 6px
+			width: 85px
+			height: 85px
+			margin-bottom: 8px
+
+	&-subtitle
+		display: block
+		@include max690
+			font-size: 8px
+
+	&-title
+		margin: 0
+		color: $color-text-gray
+		text-transform: uppercase
+		@include max690
+			font-size: 13px

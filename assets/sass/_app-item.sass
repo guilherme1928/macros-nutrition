@@ -1,0 +1,62 @@
+.row-flex-app-item
+	// layout
+	justify-content: center
+	align:
+		items: stretch
+		content: center
+
+	// style
+	// border-bottom: 1px solid $color-border-gray-light
+
+.app-item
+	// layout
+	display: flex
+	flex-flow: column wrap
+	justify-content: center
+	align:
+		items: center
+		content: center
+	min-height: 90px
+
+	// style
+	padding:
+		top: 15px
+		bottom: 15px
+	border: 1px solid $color-border-gray-light
+		top: none
+		bottom: none
+	text-align: center
+
+	@include max690
+		padding:
+			top: 10px
+			bottom: 10px
+	&:first-child,
+	&:last-child
+		border:
+			left: none
+			right: none
+
+	&-title
+		font-weight: normal
+		margin: 0 0
+		text-transform: uppercase
+		display: block
+		@include max690
+			margin-bottom: 5px
+			font-size: 10px
+
+	p
+		margin: 0
+		// text-transform: uppercase
+
+		@include max690
+			line-height: 1.1
+		a
+			font-weight: bold
+
+			&:hover,
+			&:focus
+				color: black
+			@include max690
+				font-size: 13px

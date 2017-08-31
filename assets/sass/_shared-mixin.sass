@@ -1,0 +1,111 @@
+/* installing fonts
+ * Fool-proof @font-face 
+ * Based on http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration
+/* --------------------------------------------------- */
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+	@font-face
+		font-family: $font-family
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),url('#{$file-path}.woff') format('woff'),
+				url('#{$file-path}.ttf') format('truetype'),
+				url('#{$file-path}.svg##{$font-family}') format('svg')
+		font-weight: $font-weight
+		font-style: $font-style
+
+	// Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+	@media screen and (-webkit-min-device-pixel-ratio: 0)
+		@font-face
+			font-family: $font-family
+			src: url('#{$file-path}.svg##{$font-family}') format('svg')
+
+// @include font-face(Brandon, '../fonts/brandon_re-webfont', 400, normal)
+// @mixin Brandon
+// 	font-family: "Brandon", sans-serif
+// 	font-weight: 400
+// 	font-style: normal
+
+/* simple mixins
+/* --------------------------------------------------- */
+
+@mixin selection()
+	::selection
+		@content
+	::-moz-selection
+		@content
+
+@mixin placeholder
+	::placeholder
+		@content
+	::-moz-placeholder
+		@content
+
+@mixin opacity ( $value: 0.5 )
+	opacity: $value
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)"
+	filter: alpha(opacity= $value * 100 )
+	zoom: 1
+
+@mixin antialias
+	-webkit-font-smoothing: antialiased
+	-webkit-text-size-adjust: 100%
+	text-rendering: optimizeLegibility
+
+@mixin circle( $size: 35px )
+	text-align: center
+	display: inline-block
+	line-height: $size
+	height: $size
+	width: $size
+	border-radius: 50%
+
+
+@mixin overflowlinetitle()
+	display: block /* fallback for non-webkit */
+	display: -webkit-box
+	margin-bottom: 0
+	-webkit-line-clamp: 2 /* max-height line is 2 */
+	-webkit-box-orient: vertical /* set orientation to vertical */
+	overflow: hidden
+	text-overflow: ellipsis
+
+/* media-queries
+/* --------------------------------------------------- */
+@mixin max1200()
+	@media(max-width: 1200px)
+		@content
+
+@mixin max1150()
+	@media(max-width: 1150px)
+		@content
+
+@mixin max995()
+	@media(max-width: 995px)
+		@content
+
+@mixin max990()
+	@media(max-width: 990px)
+		@content
+
+@mixin max950()
+	@media(max-width: 950px)
+		@content
+
+@mixin max767()
+	@media(max-width: 767px)
+		@content
+
+@mixin max690()
+	@media(max-width: 690px)
+		@content
+
+@mixin max570()
+	@media(max-width: 570px)
+		@content
+
+@mixin max480()
+	@media(max-width: 480px)
+		@content
+
+@mixin max380
+	@media(max-width: 480px)
+		@content

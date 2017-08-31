@@ -1,0 +1,25 @@
+.app-section
+	+ .app-section
+		border-top: 1px solid $color-border-gray-light
+	&:first-child
+		border-bottom: none !important
+	&:last-child
+		border-bottom: 1px solid $color-border-gray-light
+	&-header
+		// layout
+		padding: 7px 0
+		display: block
+
+		// style
+		border-bottom: 1px solid $color-border-gray-light
+		text-align: center
+
+		h2
+			margin: 0
+			text-transform: uppercase
+			@include max690
+				font-size: 13px
+
+	&-checkin
+		.app-section-header
+			padding: 15px 0 15px

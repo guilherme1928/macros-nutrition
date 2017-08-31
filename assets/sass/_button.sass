@@ -1,0 +1,24 @@
+.btn
+	padding: 12px 18px
+	display: inline-block
+	text-transform: uppercase
+	border: none
+	border-radius: 3px
+	@include max690
+		padding: 6px 35px
+		font-size: 12px
+
+	&-cta
+		background: $color-bg-black
+		color: white
+
+	&-checkin
+		border-radius: 33px
+		background: white
+		color: $color-text-gray
+		@include max690
+			padding: 4px 20px
+			font-size: 10px
+		&:first-child
+			background: $color-bg-gray
+			color: white

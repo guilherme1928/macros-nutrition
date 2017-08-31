@@ -1,0 +1,97 @@
+.app-main-toggle
+	// layout
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background: white
+	z-index: 22
+
+	// animation
+	transition: opacity 350ms ease, transform 350ms ease
+	@include opacity(0)
+	visibility: hidden
+
+	&.active
+		@include opacity(1)
+		visibility: visible
+
+
+
+.menu-main-toggle
+	text-align: center
+	h3
+		margin: 0
+		text-transform: uppercase
+		padding: 25px 0 15px
+		@include max690
+			font-size: 13px
+
+	ul
+		list-style: none outside none
+		margin: 0
+		padding: 0
+		li
+			display: block
+			border-bottom: 1px solid $color-border-gray-light
+
+			&:first-child
+				border-top: 1px solid $color-border-gray-light
+
+			&:hover,
+			&:focus
+				> a
+					color: black
+
+			> a
+				display: block
+				padding: 15px
+				font-weight: bold
+
+				@include max690
+					font-size: 11px
+					text-transform: uppercase
+
+			> ul
+				li
+					border: none !important
+					margin: 7px 0
+					&:hover,
+					&:focus,
+					&.active
+						> a
+							background: $color-bg-gray
+							color: white
+
+					> a
+						display: inline-block
+						border-radius: 33px
+						text-transform: none
+						padding: 7px 30px
+	.is-child
+		> a
+			position: relative
+			&.collapsed
+				&:before
+					top: 18px
+					transform: rotate(135deg)
+
+			&:before
+				// create arrow
+				content: ''
+				position: absolute
+				top: 20px
+				transform: rotate(-45deg)
+				right: 15px
+				width: 8px
+				height: 8px
+				border:
+					right: 2px solid $color-bg-gray
+					top: 2px solid $color-bg-gray
+				@extend %default-transition
+
+		&.is-active
+			top: 18px
+			transform: rotate(135deg)
+

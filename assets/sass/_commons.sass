@@ -1,0 +1,53 @@
+body, html
+	height: 100%
+
+body
+	font:
+		family: $font-body
+		size: 14px
+	line-height: 1.6e
+	color: $color-text-gray
+body
+	display: flex
+	min-height: 100vh
+	flex-direction: column
+
+body .site-main
+	flex: 1
+
+@include selection
+
+a
+	color: $color-text-gray
+	text-decoration: none
+	@extend %default-transition
+
+	&:hover,
+	&:focus
+		text-decoration: none
+
+h1, h2, h3, h4, h5, h6
+	font:
+		weight: bold
+
+iframe
+	border: none
+	width: 100%
+
+img
+	max-width: 100%
+
+.cb
+	clear: both
+
+// layout
+.app-section
+	@include max990
+		width: 100%
+		padding:
+			left: 0
+			right: 0
+
+.row-flex
+	display: flex
+	flex-flow: row wrap

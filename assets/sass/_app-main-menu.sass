@@ -1,0 +1,23 @@
+.app-main-menu
+	
+	position: relative
+	display: block
+	@include opacity(1)
+	visibility: visible
+
+	.menu-main-toggle
+		// layout
+		display: flex
+		min-height: 100vh
+		flex-direction: column
+
+	> ul
+		// layouting
+		flex: 1
+
+	h3
+		@include max690
+			font-size: 14px
+
+	.menu-main-cta
+		text-align: center
