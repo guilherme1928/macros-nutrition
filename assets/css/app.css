@@ -1912,6 +1912,16 @@ tbody.collapse.in {
 /* --------------------------------------------------- */
 /* media-queries */
 /* --------------------------------------------------- */
+.basic-text-field {
+  border: solid 2px #d5d5d5;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 4px;
+  width: 600px !important;
+  height: 50px !important;
+  text-align: center;
+}
+
 /* variables */
 /* --------------------------------------------------- */
 /* settings-default */
@@ -1928,6 +1938,16 @@ a, .menu-main-toggle .is-child > a:before {
 /* --------------------------------------------------- */
 /* media-queries */
 /* --------------------------------------------------- */
+.basic-text-field {
+  border: solid 2px #d5d5d5;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 4px;
+  width: 600px !important;
+  height: 50px !important;
+  text-align: center;
+}
+
 body, html {
   height: 100%;
 }
@@ -2061,6 +2081,10 @@ img {
   filter: alpha(opacity=100);
   zoom: 1;
   visibility: visible;
+}
+
+.app-item-title {
+  margin-bottom: 10px !important;
 }
 
 .menu-main-toggle {
@@ -2252,7 +2276,7 @@ img {
 }
 
 .app-item-title {
-  font-weight: normal;
+  font-weight: bold;
   margin: 0 0;
   text-transform: uppercase;
   display: block;
@@ -2486,6 +2510,35 @@ img {
 .btn-checkin:first-child {
   background: #a2a2a2;
   color: white;
+}
+
+.first-child-questionnaire {
+  margin-top: 20px;
+}
+
+.basic-text-field {
+  border: solid 2px #d5d5d5;
+  font-size: 1.2em;
+  color: #666;
+  border-radius: 4px;
+  width: 300px !important;
+  height: 40px;
+  text-align: center;
+}
+
+.birthdate {
+  width: 50% !important;
+}
+
+.border-title {
+  border-bottom: 1px solid #D2D2D2;
+  width: 90%;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.fields-questionnaire {
+  border: white !important;
 }
 
 /*# sourceMappingURL=app.css.map */
